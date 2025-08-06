@@ -6,6 +6,8 @@ setup(
     name=package_name,
     version='0.0.1',
     packages=[package_name],
+    package_data={package_name: ['*.py']},  # 添加这一行，确保python脚本被安装
+    include_package_data=True,
     data_files=[
         ('share/' + package_name, ['package.xml']),
     ],
